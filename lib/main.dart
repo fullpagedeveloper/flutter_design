@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design/model/course.dart';
+
+import 'components/card/recent_course_card.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,17 +15,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Container(
-            child: RecentCourseCard(),
+            child: RecentCourseCard(
+              course: recentCourse[0],
+            ),
           ),
         ),
       ),
     );
-  }
-}
-
-class RecentCourseCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
