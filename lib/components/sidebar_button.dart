@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class SidebarButton extends StatelessWidget {
+  SidebarButton({required this.trigerAnimation});
+
+  final Function()? trigerAnimation;
+
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      onPressed: () => print("Gassss"),
+      onPressed: trigerAnimation,
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
